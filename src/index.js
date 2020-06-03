@@ -24,13 +24,13 @@ function formatDate(date) {
   return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
 }
 
-class AuthorPlugin {
+class LogInfo {
   constructor(options) {
     this.options = options;
   }
 
   apply(compiler) {
-    compiler.hooks.emit.tap('author-plugin', (compilation) => {
+    compiler.hooks.emit.tap('log-info-webpack-plugin', (compilation) => {
       const { options } = this;
       return new Promise((resolve) => {
         const { assets } = compilation;
@@ -51,4 +51,4 @@ class AuthorPlugin {
   }
 }
 
-module.exports = AuthorPlugin;
+module.exports = LogInfo;
