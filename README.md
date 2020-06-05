@@ -43,5 +43,5 @@ const LogInfoPlugin = require('log-info-webpack-plugin')
 
 + 使用效果
 
-![效果图demo](./demo.jpg)
+![效果图demo](./screenshot/demo.jpg)
 
