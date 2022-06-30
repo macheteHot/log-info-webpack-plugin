@@ -9,7 +9,7 @@
 
 + vue.config.js配置使用
 ```javascript
-const LogInfoPlugin = require('log-info-webpack-plugin')
+const { LogInfoPlugin } = require('log-info-webpack-plugin')
 
 
 chainWebpack: config => {
@@ -26,7 +26,7 @@ chainWebpack: config => {
 或者 
 
 ```javascript
-const LogInfoPlugin = require('log-info-webpack-plugin')
+const { LogInfoPlugin } = require('log-info-webpack-plugin')
 
 {
   // ... config settings here ...
@@ -40,6 +40,25 @@ const LogInfoPlugin = require('log-info-webpack-plugin')
 };
 ```
 
++ vite配置使用
+
+vite.config.js
+插件使用了 Vite 特有的插件钩子 transformIndexHtml 不支持Rollup
+
+```javascript
+import { logInfoVitePlugin } from 'log-info-webpack-plugin'
+
+export default defineConfig({
+  plugins: [
+    react(),
+    logInfoVitePlugin({
+      key1:'value1', //可选,如“version”版本号，根据key/value打印
+      key2:'value2', //可选,如“version”版本号，根据key/value打印
+      // ...  more
+    })
+  ]
+})
+```
 
 + 使用效果
 
