@@ -9,7 +9,7 @@
 
 + vue.config.js配置使用
 ```javascript
-const { LogInfoPlugin } = require('log-info-webpack-plugin')
+const LogInfoPlugin = require('log-info-webpack-plugin')
 
 
 chainWebpack: config => {
@@ -26,7 +26,7 @@ chainWebpack: config => {
 或者 
 
 ```javascript
-const { LogInfoPlugin } = require('log-info-webpack-plugin')
+const LogInfoPlugin = require('log-info-webpack-plugin')
 
 {
   // ... config settings here ...

@@ -39,18 +39,18 @@ function dealHtml(html, logObj) {
   return html.replace(/<\/body>/, `<script type="text/javascript">(function logTag(d){var b="font-family: sans-serif;font-weight: bold;font-size: 12px;padding:5px;";var c="color:#fff;background:#000;"+b+"border-radius:4px 0 0 4px";var a="color:#000;background:#FF9900;"+b+"border-radius:0 4px 4px 0";d.forEach(function(e){console.log("%c"+e[0]+"%c"+e[1],c,a)})})(${JSON.stringify([...baseList,...diyList])})</script></body>`);
 }
 
-function logInfoVitePlugin(logObj = {}) {
-  return {
-    name: pluginName,
-    transformIndexHtml(html) {
-      return dealHtml(html, logObj);
-    }
-  }
-}
-
 class LogInfo {
   constructor(logObj) {
     this.logObj = logObj;
+  }
+
+  static logInfoVitePlugin(logObj = {}) {
+    return {
+      name: pluginName,
+      transformIndexHtml(html) {
+        return dealHtml(html, logObj);
+      }
+    }
   }
 
   apply(compiler) {
@@ -96,4 +96,4 @@ class LogInfo {
   }
 }
 
-module.exports = { LogInfo, logInfoVitePlugin };
+module.exports = LogInfo;
