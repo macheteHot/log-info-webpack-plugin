@@ -11,14 +11,6 @@ function getConsoleStr({
   return `console.log("%c${key}%c${value}","${keyStyle}","${valueStyle}");`;
 }
 
-// function logTag(array) {
-//   const baseStyle = 'font-family: sans-serif;font-weight: bold;font-size: 12px;padding:5px;';
-//   const keyStyle = `color:#fff;background:#000;${baseStyle}border-radius:4px 0 0 4px`;
-//   const valueStyle = `color:#000;background:#FF9900;${baseStyle}border-radius:0 4px 4px 0`;
-//   array.forEach((item) => {
-//     console.log(`%c${item[0]}%c${item[1]}`, keyStyle, valueStyle);
-//   });
-// }
 
 function formatDate(date) {
   const year = date.getFullYear();
