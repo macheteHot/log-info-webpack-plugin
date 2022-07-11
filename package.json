@@ -18,6 +18,10 @@
   ],
   "author": "machete <rtpppp163@gmail.com>",
   "license": "MIT",
+  "files": [
+    "lib/*",
+    "README.md"
+  ],
   "bugs": {
     "url": "https://github.com/macheteHot/log-info-webpack-plugin/issues"
   },
