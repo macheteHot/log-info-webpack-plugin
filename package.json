@@ -1,6 +1,6 @@
 {
   "name": "log-info-webpack-plugin",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "add console.log build info to index.html, compatible with webpack and vite",
   "main": "dist/index.js",
   "engines": {
