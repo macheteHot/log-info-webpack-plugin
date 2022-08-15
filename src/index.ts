@@ -89,4 +89,8 @@ class LogInfo {
   }
 }
 
+export const logInfoVitePlugin = (logObj: Record<string, unknown>) =>
+  LogInfo.logInfoVitePlugin(logObj);
+
+export default LogInfo;
 module.exports = LogInfo;
